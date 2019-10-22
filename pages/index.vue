@@ -1,72 +1,47 @@
 <template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        alttp_srm
-      </h1>
-      <h2 class="subtitle">
-        A Link to the Past SRAM Parsing Tool
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+  <div>
+    <!-- Using a custom slot -->
+    <dropzone
+      id="bar"
+      ref="bar"
+      :options="options"
+      :destroyDropzone="true"
+      :useCustomSlot="true"
+      @v-on:vdropzone-success='test'>
+      <div class="dropzone-custom-content">
+        <h3 class="dropzone-custom-title">
+          Custom slot
+        </h3>
+        <p class="subtitle">
+          Subtitle
+        </p>
       </div>
-    </div>
+    </dropzone>
   </div>
 </template>
-
 <script>
-import Logo from '~/components/Logo.vue';
-
+import Dropzone from 'nuxt-dropzone'
+import 'nuxt-dropzone/dropzone.css'
 export default {
   components: {
-    Logo
+    Dropzone
+  },
+  data () {
+    return {
+      // See https://rowanwins.github.io/vue-dropzone/docs/dist/index.html#/props
+      options: {
+        url: 'test'
+      }
+    }
+  },
+  mounted () {
+    // Everything is mounted and you can access the dropzone instance
+    // const instance = this.$refs.foo.dropzone
+  },
+  methods: {
+    test (a, b) {
+      console.log(a, b)
+    }
   }
-};
+}
 </script>
-
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>
