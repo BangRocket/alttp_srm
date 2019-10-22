@@ -13,15 +13,17 @@
       "request": "launch",
       "name": "server: nuxt",
       "args": ["dev"],
-      "console":"externalTerminal",
       "osx": {
-        "program": "${workspaceFolder}/node_modules/.bin/nuxt"
+        "program": "${workspaceFolder}/node_modules/.bin/nuxt",
+        "console":"externalTerminal"
       },
       "linux": {
-        "program": "${workspaceFolder}/node_modules/.bin/nuxt"
+        "program": "${workspaceFolder}/node_modules/.bin/nuxt",
+        "console":"externalTerminal"
       },
       "windows": {
-        "program": "${workspaceFolder}/node_modules/nuxt/bin/nuxt.js"
+        "program": "${workspaceFolder}/node_modules/nuxt/bin/nuxt.js",
+        "console":"integratedTerminal",
       }
     }
   ],

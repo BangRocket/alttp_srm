@@ -10,15 +10,16 @@
       @v-on:vdropzone-success='test'>
       <div class="dropzone-custom-content">
         <h3 class="dropzone-custom-title">
-          Custom slot
+         Please drop your A Link to the Past SRAM file here.
         </h3>
         <p class="subtitle">
-          Subtitle
+          *.srm format accepted
         </p>
       </div>
     </dropzone>
   </div>
 </template>
+
 <script>
 import Dropzone from 'nuxt-dropzone'
 import 'nuxt-dropzone/dropzone.css'
@@ -30,7 +31,7 @@ export default {
     return {
       // See https://rowanwins.github.io/vue-dropzone/docs/dist/index.html#/props
       options: {
-        url: 'test'
+        url: 'upload'
       }
     }
   },

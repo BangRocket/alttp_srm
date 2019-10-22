@@ -5,24 +5,28 @@
   "author": "Joshua Heidorn",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "concurrently \"nuxt\" \"nodemon ./api\"",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
+    "@nuxtjs/axios": "^5.7.1",
     "@nuxtjs/bulma": "^1.2.1",
+    "formidable": "^1.2.1",
     "nuxt": "^2.0.0",
     "nuxt-dropzone": "^1.0.4",
     "typescript": "^3.7.0-beta"
   },
   "devDependencies": {
+    "@nuxt/typescript-build": "^0.3.2",
     "@nuxtjs/eslint-config": "^1.0.1",
     "@nuxtjs/eslint-module": "^1.0.0",
     "@typescript-eslint/eslint-plugin": "^2.4.0",
     "@typescript-eslint/parser": "^2.4.0",
     "babel-eslint": "^10.0.3",
+    "concurrently": "^5.0.0",
     "eslint": "^5.16.0",
     "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "^6.4.0",
