@@ -14,7 +14,9 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.7.1",
     "@nuxtjs/bulma": "^1.2.1",
+    "chokidar": "^3.2.2",
     "formidable": "^1.2.1",
+    "mongoose": "^5.7.6",
     "nuxt": "^2.0.0",
     "nuxt-dropzone": "^1.0.4",
     "typescript": "^3.7.0-beta"

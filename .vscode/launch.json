@@ -15,7 +15,7 @@
       "args": ["dev"],
       "osx": {
         "program": "${workspaceFolder}/node_modules/.bin/nuxt",
-        "console":"externalTerminal"
+        "console":"integratedTerminal"
       },
       "linux": {
         "program": "${workspaceFolder}/node_modules/.bin/nuxt",

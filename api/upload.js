@@ -15,7 +15,7 @@ app.post('/upload', (req, res) => {
     }
 
     for (const file of Object.entries(files)) {
-      console.log(file)
+      // console.log(file)
     }
 
     res.send({ recieved: true })

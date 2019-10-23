@@ -62,7 +62,8 @@ export default {
     extend (config, ctx) {}
   },
   serverMiddleware: [
-    '~/api/upload'
+    '~/api/upload',
+    '~/app/watcher'
   ],
   axios: {
     // proxyHeaders: false
@@ -71,6 +72,6 @@ export default {
 
 module.exports = {
   build: {
-    watch: ['api']
+    watch: ['api', 'app']
   }
 }
