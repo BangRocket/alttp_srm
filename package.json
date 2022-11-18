@@ -17,7 +17,7 @@
     "chokidar": "^3.2.2",
     "formidable": "^1.2.1",
     "mongoose": "^5.7.6",
-    "nuxt": "^2.0.0",
+    "nuxt": "^2.15.8",
     "nuxt-dropzone": "^1.0.4",
     "typescript": "^3.7.0-beta"
   },
